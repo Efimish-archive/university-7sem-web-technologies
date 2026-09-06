@@ -1,248 +1,305 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Сайт Ефима</title>
     <meta name="description" content="Мой новый только что сверстанный сайт" />
-    <meta name="keywords" content="learning tasks university" />
+    <meta name="keywords" content="learning tasks university html css" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <h1>Сайт Ефима</h1>
+    <header class="site-header" id="top">
+      <h1>Сайт Ефима</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#section-basic">базовые элементы</a></li>
+          <li><a href="#section-media">картинки и видео</a></li>
+          <li><a href="#section-form">форма</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <h2>Содержание</h2>
-    <ul>
-      <li>
-        <a href="#section-basic">базовые элементы</a>
-      </li>
-      <li>
-        <a href="#section-iframe">iframe</a>
-      </li>
-      <li>
-        <a href="#section-form">форма</a>
-      </li>
-    </ul>
+    <main>
+      <!-- ===== Базовые элементы ===== -->
+      <section id="section-basic">
+        <h2>Базовые элементы</h2>
 
-    <h2 id="section-basic">базовые элементы</h2>
-    <div>div - блочный контейнер без семантического значения</div>
-    <span>span - inline контейнер без семантического значения</span>
-    <p>p - параграф текста</p>
+        <div class="demo-block">
+          <div>div — блочный контейнер без семантического значения</div>
+          <span>span — inline-контейнер без семантического значения</span>
+          <p>p — параграф текста. <strong>Жирный текст.</strong> <em>Курсивный текст.</em> <mark>Подсветка.</mark></p>
+          <p>
+            Форматирование: <sub>нижний индекс</sub>, <sup>верхний индекс</sup>,
+            <small>мелкий текст</small>, <del>удалённый</del>, <ins>добавленный</ins>,
+            <code>код</code>
+          </p>
+        </div>
 
-    <table>
-      <tr>
-        <td></td>
-        <td>Pixel 8a</td>
-        <td>Pixel 8</td>
-        <td>Pixel 8 Pro</td>
-        <td>Pixel 9a</td>
-        <td>Pixel 9</td>
-        <td>Pixel 9 Pro</td>
-        <td>Pixel 10a</td>
-        <td>Pixel 10</td>
-        <td>Pixel 10 Pro</td>
-      </tr>
-      <tr>
-        <td>Height (in)</td>
-        <td>6</td>
-        <td>5.9</td>
-        <td>6.4</td>
-        <td>6.1</td>
-        <td>6</td>
-        <td>6</td>
-        <td>6.1</td>
-        <td>6</td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <td>Width (in)</td>
-        <td>2.9</td>
-        <td>2.8</td>
-        <td>3</td>
-        <td>2.9</td>
-        <td>2.8</td>
-        <td>2.8</td>
-        <td>2.9</td>
-        <td>2.8</td>
-        <td>2.8</td>
-      </tr>
-      <tr>
-        <td>Depth (in)</td>
-        <td>0.4</td>
-        <td>0.4</td>
-        <td>0.3</td>
-        <td>0.4</td>
-        <td>0.3</td>
-        <td>0.3</td>
-        <td>0.4</td>
-        <td>0.3</td>
-        <td>0.3</td>
-      </tr>
-      <tr>
-        <td>Weight (oz)</td>
-        <td>6.7</td>
-        <td>6.6</td>
-        <td>7.5</td>
-        <td>6.6</td>
-        <td>7</td>
-        <td>7</td>
-        <td>6.5</td>
-        <td>7.2</td>
-        <td>7.3</td>
-      </tr>
-      <tr>
-        <td>Weight (g)</td>
-        <td>190</td>
-        <td>187</td>
-        <td>213</td>
-        <td>187</td>
-        <td>198</td>
-        <td>198</td>
-        <td>184</td>
-        <td>204</td>
-        <td>207</td>
-      </tr>
-      <tr>
-        <td>Screen Size (in)</td>
-        <td>6.1</td>
-        <td>6.2</td>
-        <td>6.7</td>
-        <td>6.3</td>
-        <td>6.3</td>
-        <td>6.3</td>
-        <td>6.3</td>
-        <td>6.3</td>
-        <td>6.3</td>
-      </tr>
-      <tr>
-        <td>Screen Refresh Rate (Hz)</td>
-        <td>120</td>
-        <td>60-120</td>
-        <td>1-120</td>
-        <td>60-120</td>
-        <td>60-120</td>
-        <td>1-120</td>
-        <td>60-120</td>
-        <td>60-120</td>
-        <td>1-120</td>
-      </tr>
-      <tr>
-        <td>Battery Size (mAh)</td>
-        <td>4492</td>
-        <td>4575</td>
-        <td>5050</td>
-        <td>5100</td>
-        <td>4700</td>
-        <td>4700</td>
-        <td>5100</td>
-        <td>4970</td>
-        <td>4870</td>
-      </tr>
-      <tr>
-        <td>RAM (GB)</td>
-        <td>8</td>
-        <td>8</td>
-        <td>12</td>
-        <td>8</td>
-        <td>12</td>
-        <td>16</td>
-        <td>8</td>
-        <td>12</td>
-        <td>16</td>
-      </tr>
-      <tr>
-        <td>Processor</td>
-        <td>Tensor G3 + Titan M2</td>
-        <td>Tensor G3 + Titan M2</td>
-        <td>Tensor G3 + Titan M2</td>
-        <td>Tensor G4 + Titan M2</td>
-        <td>Tensor G4 + Titan M2</td>
-        <td>Tensor G4 + Titan M2</td>
-        <td>Tensor G4 + Titan M2</td>
-        <td>Tensor G5 + Titan M2</td>
-        <td>Tensor G5 + Titan M2</td>
-      </tr>
-      <tr>
-        <td>WiFi</td>
-        <td>6e</td>
-        <td>7</td>
-        <td>7</td>
-        <td>6e</td>
-        <td>7</td>
-        <td>7</td>
-        <td>6e</td>
-        <td>6e</td>
-        <td>7</td>
-      </tr>
-      <tr>
-        <td>Bluetooth</td>
-        <td>5.3</td>
-        <td>5.3</td>
-        <td>5.3</td>
-        <td>5.3</td>
-        <td>5.3</td>
-        <td>5.3</td>
-        <td>6.0</td>
-        <td>6.0</td>
-        <td>6.0</td>
-      </tr>
-      <tr>
-        <td>Cellular</td>
-        <td>5G</td>
-        <td>5G</td>
-        <td>5G</td>
-        <td>5G</td>
-        <td>5G</td>
-        <td>5G</td>
-        <td>5G</td>
-        <td>5G</td>
-        <td>5G</td>
-      </tr>
-      <tr>
-        <td>Sim Tray</td>
-        <td>1 nanoSIM, 1 eSIM</td>
-        <td>1 nanoSIM, 1 eSIM</td>
-        <td>1 nanoSIM, 1 eSIM</td>
-        <td>1 nanoSIM, 1 eSIM</td>
-        <td>1 nanoSIM, 1 eSIM</td>
-        <td>1 nanoSIM, 1 eSIM</td>
-        <td>1 nanoSIM, 1 eSIM</td>
-        <td>eSIM only OR 1 nanoSIM, 1 eSIM</td>
-        <td>eSIM only OR 1 nanoSIM, 1 eSIM</td>
-      </tr>
-      <tr>
-        <td>AVG Price (₽)</td>
-        <td>20,000</td>
-        <td>20,000</td>
-        <td>24,000</td>
-        <td>28,000</td>
-        <td>36,000</td>
-        <td>44,000</td>
-        <td>33,000</td>
-        <td>43,000</td>
-        <td>60,000</td>
-      </tr>
-    </table>
+        <h3>Таблица Pixel</h3>
+        <div class="table-wrapper">
+          <table>
+            <tr>
+              <td></td>
+              <td>Pixel 8a</td>
+              <td>Pixel 8</td>
+              <td>Pixel 8 Pro</td>
+              <td>Pixel 9a</td>
+              <td>Pixel 9</td>
+              <td>Pixel 9 Pro</td>
+              <td>Pixel 10a</td>
+              <td>Pixel 10</td>
+              <td>Pixel 10 Pro</td>
+            </tr>
+            <tr>
+              <td>Height (in)</td>
+              <td>6</td>
+              <td>5.9</td>
+              <td>6.4</td>
+              <td>6.1</td>
+              <td>6</td>
+              <td>6</td>
+              <td>6.1</td>
+              <td>6</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Width (in)</td>
+              <td>2.9</td>
+              <td>2.8</td>
+              <td>3</td>
+              <td>2.9</td>
+              <td>2.8</td>
+              <td>2.8</td>
+              <td>2.9</td>
+              <td>2.8</td>
+              <td>2.8</td>
+            </tr>
+            <tr>
+              <td>Depth (in)</td>
+              <td>0.4</td>
+              <td>0.4</td>
+              <td>0.3</td>
+              <td>0.4</td>
+              <td>0.3</td>
+              <td>0.3</td>
+              <td>0.4</td>
+              <td>0.3</td>
+              <td>0.3</td>
+            </tr>
+            <tr>
+              <td>Weight (oz)</td>
+              <td>6.7</td>
+              <td>6.6</td>
+              <td>7.5</td>
+              <td>6.6</td>
+              <td>7</td>
+              <td>7</td>
+              <td>6.5</td>
+              <td>7.2</td>
+              <td>7.3</td>
+            </tr>
+            <tr>
+              <td>Weight (g)</td>
+              <td>190</td>
+              <td>187</td>
+              <td>213</td>
+              <td>187</td>
+              <td>198</td>
+              <td>198</td>
+              <td>184</td>
+              <td>204</td>
+              <td>207</td>
+            </tr>
+            <tr>
+              <td>Screen Size (in)</td>
+              <td>6.1</td>
+              <td>6.2</td>
+              <td>6.7</td>
+              <td>6.3</td>
+              <td>6.3</td>
+              <td>6.3</td>
+              <td>6.3</td>
+              <td>6.3</td>
+              <td>6.3</td>
+            </tr>
+            <tr>
+              <td>Screen Refresh Rate (Hz)</td>
+              <td>120</td>
+              <td>60–120</td>
+              <td>1–120</td>
+              <td>60–120</td>
+              <td>60–120</td>
+              <td>1–120</td>
+              <td>60–120</td>
+              <td>60–120</td>
+              <td>1–120</td>
+            </tr>
+            <tr>
+              <td>Battery Size (mAh)</td>
+              <td>4492</td>
+              <td>4575</td>
+              <td>5050</td>
+              <td>5100</td>
+              <td>4700</td>
+              <td>4700</td>
+              <td>5100</td>
+              <td>4970</td>
+              <td>4870</td>
+            </tr>
+            <tr>
+              <td>RAM (GB)</td>
+              <td>8</td>
+              <td>8</td>
+              <td>12</td>
+              <td>8</td>
+              <td>12</td>
+              <td>16</td>
+              <td>8</td>
+              <td>12</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td>Processor</td>
+              <td>Tensor G3</td>
+              <td>Tensor G3</td>
+              <td>Tensor G3</td>
+              <td>Tensor G4</td>
+              <td>Tensor G4</td>
+              <td>Tensor G4</td>
+              <td>Tensor G4</td>
+              <td>Tensor G5</td>
+              <td>Tensor G5</td>
+            </tr>
+            <tr>
+              <td>WiFi</td>
+              <td>6e</td>
+              <td>7</td>
+              <td>7</td>
+              <td>6e</td>
+              <td>7</td>
+              <td>7</td>
+              <td>6e</td>
+              <td>6e</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Bluetooth</td>
+              <td>5.3</td>
+              <td>5.3</td>
+              <td>5.3</td>
+              <td>5.3</td>
+              <td>5.3</td>
+              <td>5.3</td>
+              <td>6.0</td>
+              <td>6.0</td>
+              <td>6.0</td>
+            </tr>
+            <tr>
+              <td>Cellular</td>
+              <td>5G</td>
+              <td>5G</td>
+              <td>5G</td>
+              <td>5G</td>
+              <td>5G</td>
+              <td>5G</td>
+              <td>5G</td>
+              <td>5G</td>
+              <td>5G</td>
+            </tr>
+            <tr>
+              <td>Sim Tray</td>
+              <td>1 nanoSIM, 1 eSIM</td>
+              <td>1 nanoSIM, 1 eSIM</td>
+              <td>1 nanoSIM, 1 eSIM</td>
+              <td>1 nanoSIM, 1 eSIM</td>
+              <td>1 nanoSIM, 1 eSIM</td>
+              <td>1 nanoSIM, 1 eSIM</td>
+              <td>1 nanoSIM, 1 eSIM</td>
+              <td>eSIM / 1 nanoSIM, 1 eSIM</td>
+              <td>eSIM / 1 nanoSIM, 1 eSIM</td>
+            </tr>
+            <tr>
+              <td>AVG Price (₽)</td>
+              <td>20 000</td>
+              <td>20 000</td>
+              <td>24 000</td>
+              <td>28 000</td>
+              <td>36 000</td>
+              <td>44 000</td>
+              <td>33 000</td>
+              <td>43 000</td>
+              <td>60 000</td>
+            </tr>
+          </table>
+        </div>
+      </section>
 
-    <h2 id="iframe">iframe</h2>
-    <iframe
-      src="https://bombasticfantastik.github.io/"
-      title="Сайт Артемия"
-    ></iframe>
+      <!-- ===== Картинки и видео ===== -->
+      <section id="section-media">
+        <h2>Картинки и видео</h2>
 
-    <h2 id="form">форма</h2>
+        <picture>
+          <source media="(min-width: 600px)" srcset="https://picsum.photos/seed/pixel1/800/400" />
+          <source media="(max-width: 599px)" srcset="https://picsum.photos/seed/pixel2/400/200" />
+          <img src="https://picsum.photos/seed/pixel1/800/400" alt="Пейзаж" class="hero-img" />
+        </picture>
 
-    <form action="https://www.google.com/search">
-      <input name="q" type="text" placeholder="Поиск в Google" />
-      <select name="udm">
-        <option value="">Все</option>
-        <option value="2">Картинки</option>
-        <option value="7">Видео</option>
-        <option value="12">Новости</option>
-        <option value="50">Режим ИИ</option>
-      </select>
-      <button>Искать!</button>
-    </form>
+        <h3>iframe</h3>
+        <iframe
+          src="https://bombasticfantastik.github.io/"
+          title="Сайт Артемия"
+          class="demo-iframe"
+        ></iframe>
+      </section>
+
+      <!-- ===== Форма ===== -->
+      <section id="section-form">
+        <h2>Форма</h2>
+
+        <form action="https://www.google.com/search" class="search-form">
+          <div class="form-row">
+            <label for="search-input">Запрос:</label>
+            <input id="search-input" name="q" type="text" placeholder="Поиск в Google" />
+          </div>
+          <div class="form-row">
+            <label for="search-type">Тип:</label>
+            <select id="search-type" name="udm">
+              <option value="">Все</option>
+              <option value="2">Картинки</option>
+              <option value="7">Видео</option>
+              <option value="12">Новости</option>
+              <option value="50">Режим ИИ</option>
+            </select>
+          </div>
+          <fieldset class="form-row">
+            <legend>Язык поиска</legend>
+            <label><input type="radio" name="lang" value="ru" checked /> Русский</label>
+            <label><input type="radio" name="lang" value="en" /> English</label>
+          </fieldset>
+          <div class="form-row">
+            <label><input type="checkbox" name="safe" value="1" /> Безопасный поиск</label>
+          </div>
+          <div class="form-row">
+            <label for="msg">Комментарий:</label>
+            <textarea id="msg" name="msg" rows="3" placeholder="Дополнительные пожелания"></textarea>
+          </div>
+          <div class="form-row">
+            <button type="submit">Искать!</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- z-index demo: fixed floating button -->
+    <a href="#top" class="fab" aria-label="Наверх">&#8679;</a>
+
+    <footer class="site-footer">
+      <p>Сделано Ефимом &copy; 2026</p>
+    </footer>
   </body>
 </html>
