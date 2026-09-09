@@ -1,0 +1,10 @@
+{
+  "gallery": "My gallery",
+  "images": [
+    { "name": "Cat Pringles", "file": "/images/catpringles.jpg" },
+    { "name": "Cow Bucket", "file": "/images/cowbucket.jpg" },
+    { "name": "Cow Flipper", "file": "/images/cowflipper.png" },
+    { "name": "Dog Pot", "file": "/images/dogpot.jpg" },
+    { "name": "Weird Bird", "file": "/images/weirdbird.jpg" }
+  ]
+}
