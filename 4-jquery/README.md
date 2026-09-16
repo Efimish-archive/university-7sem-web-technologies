@@ -27,20 +27,4 @@
 7. Переключение по категориям изображений (Tabs)
 8. Смена классов изображений по нажатию кнопки (toggleClass)
 
-Применить эффект анимации по варианту:
-
-1. Blind
-2. Bounce
-3. Clip
-4. Drop
-5. Explode
-6. Fade
-7. Fold
-8. Highlight
-9. Puff
-10. Pulsate
-11. Scale
-12. Shake
-13. Size
-14. Slide
-15. Transfer
+Применить эффект анимации Drop.

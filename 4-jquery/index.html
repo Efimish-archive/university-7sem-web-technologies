@@ -3,18 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Сайт Ефима</title>
-    <meta name="description" content="Мой новый только что сверстанный сайт" />
-    <meta name="keywords" content="learning tasks university html css" />
-    <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/jquery-4.0.0.min.js"></script>
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <title>Интерактивная галерея</title>
+    <meta name="description" content="Галерея на jQuery и jQuery UI" />
+    <link rel="stylesheet" href="jquery-ui-1.14.2/jquery-ui.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-ui-1.14.2/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.14.2/jquery-ui.js"></script>
     <script type="module" src="/script.js"></script>
   </head>
   <body>
-    <h1 id="title">Галерея</h1>
-    <section id="gallery"></section>
+    <main class="page">
+      <header class="page__header">
+        <p class="eyebrow">Практическое задание · jQuery</p>
+        <h1 id="title">Загружаем галерею…</h1>
+        <p id="load-message" class="muted" aria-live="polite">Получаем описание изображений</p>
+        <div id="progressbar" aria-label="Прогресс загрузки изображений"></div>
+      </header>
+      <section class="controls" aria-label="Управление галереей">
+        <button id="toggle-style" type="button">Сменить стиль миниатюр</button>
+        <label for="gallery-date">Дата просмотра</label>
+        <input id="gallery-date" type="text" placeholder="Выберите дату" />
+      </section>
+      <section id="gallery-tabs" aria-label="Категории изображений"><ul id="tab-list"></ul></section>
+      <section class="slider-panel" aria-label="Навигация по изображениям">
+        <div class="slider-heading"><span>Лента изображений</span><output id="slide-caption">—</output></div>
+        <div id="gallery-slider"></div>
+      </section>
+      <section class="details" aria-label="Справка">
+        <div id="accordion">
+          <h3>Как пользоваться</h3><div><p>Нажмите миниатюру, чтобы открыть её крупно. В окне просмотра доступны кнопки перехода к предыдущему и следующему кадру.</p></div>
+          <h3>Категории</h3><div><p>Вкладки позволяют быстро отфильтровать изображения по категориям.</p></div>
+          <h3>Технологии</h3><div><p>Описание галереи загружается из JSON через <code>$.ajax</code>; интерфейс построен на jQuery UI.</p></div>
+        </div>
+      </section>
+    </main>
+    <div id="viewer" class="viewer" role="dialog" aria-modal="true" aria-label="Просмотр изображения" hidden style="display: none;">
+      <button id="close-viewer" class="viewer__close" type="button" aria-label="Закрыть просмотр">×</button>
+      <button id="previous-image" class="viewer__nav viewer__nav--previous" type="button" aria-label="Предыдущее изображение">‹</button>
+      <figure><img id="viewer-image" alt="" /><figcaption id="viewer-caption"></figcaption></figure>
+      <button id="next-image" class="viewer__nav viewer__nav--next" type="button" aria-label="Следующее изображение">›</button>
+    </div>
   </body>
 </html>
