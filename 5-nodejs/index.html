@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Главная</a> | <a href="/about">Обо мне</a> |
+      <a href="/my_love">Что я люблю</a> | <a href="/contact">Контакты</a>
+    </nav>
+    <h1>{{ heading }}</h1>
+    <p>Пишите нам: {{ email }}</p>
+    <hr />
+
+    <h2>Отправить заявку</h2>
+    <form action="/submit" method="POST">
+      <div>
+        <label for="username">Имя пользователя (input):</label>
+        <input type="text" id="username" name="Имя пользователя" required />
+      </div>
+
+      <div>
+        <label for="role">Выберите любимые гифки (select):</label>
+        <select id="role" name="Роль">
+          <option value="Котики">С котиками</option>
+          <option value="Взрывы">С взрывами</option>
+          <option value="Природа">С природой</option>
+        </select>
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" name="Согласие на продажу данных" value="Да" />
+          Продать данные (checkbox)
+        </label>
+      </div>
+
+      <button type="submit">Отправить (POST)</button>
+    </form>
+  </body>
+</html>

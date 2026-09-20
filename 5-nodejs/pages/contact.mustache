@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    {{{ pageList }}}
+    <main>
+      <h1>{{ title }}</h1>
+      <p>(пожалуйста не) пишите нам: {{ email }}</p>
+
+      <form action="/submit" method="POST">
+        <div>
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+        <div>
+          <label for="service">Выберите услугу:</label>
+          <select id="service" name="service">
+            <option value="">-- Выберите --</option>
+            <option value="Веб-дизайн">Веб-дизайн</option>
+            <option value="Разработка">Разработка</option>
+            <option value="SEO">SEO оптимизация</option>
+            <option value="Поддержка">Поддержка</option>
+          </select>
+        </div>
+        <div>
+          <label>Интересующие услуги:</label>
+          <div>
+            <label>
+              <input type="checkbox" name="interests" value="Дизайн" />
+              Дизайн
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="Разработка" />
+              Разработка
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="Маркетинг" />
+              Маркетинг
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="Консалтинг" />
+              Консалтинг
+            </label>
+          </div>
+        </div>
+        <div>
+          <label for="message">Сообщение:</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "title": "О нас",
+  "content": "🛠️ Мы делаем сайты 🌐",
+  "team": [
+    { "role": "Team Lead", "name": "Ефим", "emoji": "🤼" },
+    { "role": "Frontend Developer", "name": "Ефим", "emoji": "🖼️" },
+    { "role": "Backend Developer", "name": "Ефим", "emoji": "🛤️" },
+    { "role": "UX/UI", "name": "Ефим", "emoji": "🖌️" },
+    { "role": "Testing", "name": "Ефим", "emoji": "🧪" },
+    { "role": "Marketing", "name": "Ефим", "emoji": "💰" }
+  ]
+}
