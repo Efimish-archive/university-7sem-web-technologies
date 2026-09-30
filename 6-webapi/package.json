@@ -1,0 +1,12 @@
+{
+  "name": "6-webapi",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dropbox": "^10.47.0"
+  }
+}

@@ -1,0 +1,23 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      dropbox:
+        specifier: ^10.47.0
+        version: 10.47.0
+
+packages:
+
+  dropbox@10.47.0:
+    resolution: {integrity: sha512-I/V7ofG7H7vfA3e4YV5DMIxe0K+1deSsxxagKGTNprwec+X65Y57o4n8a3Zf5+VRmoSsit46xHH2HL0ZGNMcLA==}
+    engines: {node: '>=22'}
+
+snapshots:
+
+  dropbox@10.47.0: {}
